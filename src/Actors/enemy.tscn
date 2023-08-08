@@ -20,23 +20,21 @@ scale = Vector2( 1, 1.01613 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -48 )
+position = Vector2( 0, -40 )
 shape = SubResource( 1 )
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
-position = Vector2( 0, -40 )
-scale = Vector2( 6.25, 4.85 )
+position = Vector2( 0, -16 )
+scale = Vector2( 1.925, 2.025 )
 process_parent = true
 physics_process_parent = true
 
 [node name="stompdetector" type="Area2D" parent="."]
 modulate = Color( 0.196078, 0.109804, 0.941176, 1 )
 position = Vector2( 184, -34 )
-collision_layer = 0
-monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stompdetector"]
-position = Vector2( -184, -88 )
+position = Vector2( -176, -78 )
 shape = SubResource( 2 )
 
 [connection signal="body_entered" from="stompdetector" to="." method="_on_stompdetector_body_entered"]
